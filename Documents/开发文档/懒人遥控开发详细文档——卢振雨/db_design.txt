@@ -1,0 +1,157 @@
+#@autor 	lzy
+#@pram  	懒人遥控
+#@version 	v1.0.2
+#@team		第四组
+#@Copyright	2014 ?H2O2 SoftwareStudios
+
+############################################### 数据库设计原型 ###########################################
+
+数据库名：db_lc
+管理员表 (admin)
+aId   		int   			管理员编号(管理员数目少可以用简单的整型)  not null primary key
+aName 		varchar(20)		管理员姓名 								  not null
+aPsw		varchar(20)		管理员密码
+aSex  		char(2) 		管理员性别 							      check （男/女）default '男'
+aTel  		char(11)		管理员电话 							      check(11位)
+appId 		varchar(16)  		文件编号  								  foreign key(appFile) 
+sId 		varchar(8)		介绍信息编号							  foreign key(state) 
+aDate  		date			管理员最后修改日期
+
+EX:	10001	张三	1234	'男'	12345678901		2014090800100	20140908001		2014-09-08
+	10002	李四	1234	'女'	12345678902		2014090800102	20140908001		2014-09-08
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+文件表(appFile)
+appId 		varchar(16)  	文件编号  								  not null primary key
+appName		varchar(8)		文件名称								  default '懒人遥控'
+appSize		float(5,1)		文件大小 单位为（：MB）
+appVersion	varchar(4)		文件版本
+app			varchar(30)		文件链接（百度云盘链接地址）
+
+EX：2014090800100 	懒人遥控		10.5	1.0.0	http://pan/SDF1Vad213V/app	
+	2014090800102 	懒人遥控		11.5	1.0.2	http://pan/SDssdf1Vad213V/app
+	2014090800102 	懒人遥控（PC）	6.5		1.0.2	http://pan/df1Vad213V/app
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+
+
+更新说明表（state）
+sId 		varchar(8)		介绍信息编号							 not null primary key
+appId 		varchar(16)  	文件编号  								 foreign key(appFile)
+sDate		date 			更新日期
+sIntro		varchar(50)		更新摘要
+sDetail		text			说明内容
+
+EX:	20140908001	2014090800100	2014-09-08	安卓正式版1.0	懒人遥控上市了，更新了xxxxx内容
+	20140908002	2014090800102	2014-09-08	PC正式版1.0	懒人遥控是这么操作的balabalabala修复了XXXX Bug
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+用户反馈表(userAdvice)
+
+uId			varchar(12)		用户编号								 not null primary key
+uName		varChar(20)		用户姓名（可空）
+uTel		varchar(11)		用户电话（可空）
+uEmail		varChar(40)		用户邮箱（可空）
+uAdvice		text			用户反馈信息（可空）
+备注：用户反馈信息包括手机端和web端  点击’提交反馈‘将建议写入文件中缓存再上传到服务器（一般来说建议并不长，也可采用varchar存储？？？？need discuss）
+
+EX:	201409081	张三	12312412423@qq.com	12345678901	这款软件很不错
+
+
+############################################### 数据库设计 ###########################################
+
+/*
+SQLyog Ultimate v11.11 (32 bit)
+MySQL - 6.0.11-alpha-community : Database - db_lc
+*********************************************************************
+*/
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_lc` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `db_lc`;
+
+/*Table structure for table `admin` */
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `aId` int(11) NOT NULL,
+  `account` varchar(20) NOT NULL,
+  `aPsw` varchar(20) NOT NULL,
+  `aName` varchar(20) NOT NULL,
+  `aSex` char(2) DEFAULT '男',
+  `aTel` char(11) DEFAULT NULL,
+  `appId` varchar(16) DEFAULT NULL,
+  `sId` varchar(8) DEFAULT NULL,
+  `aDate` date DEFAULT NULL,
+  PRIMARY KEY (`aId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `admin` */
+
+insert  into `admin`(`aId`,`account`,`aPsw`,`aName`,`aSex`,`aTel`,`appId`,`sId`,`aDate`) values (1,'admin','ds5646','adm','男','12345678901','2014090800100','14090801','0000-00-00'),(2,'newMan','fsd556','nw','女','12345678902','2014090800102','14090801','0000-00-00');
+
+/*Table structure for table `appfile` */
+
+DROP TABLE IF EXISTS `appfile`;
+
+CREATE TABLE `appfile` (
+  `appId` varchar(16) NOT NULL,
+  `appName` varchar(8) DEFAULT NULL,
+  `appSize` float(5,1) DEFAULT NULL,
+  `appVersion` varchar(6) DEFAULT NULL,
+  `app` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`appId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `appfile` */
+
+insert  into `appfile`(`appId`,`appName`,`appSize`,`appVersion`,`app`) values ('',NULL,NULL,NULL,NULL),('2014090800100','懒人遥控',10.5,'1.0.0','http://pan/SDF1Vad213V/app'),('2014090800101','懒人遥控',11.5,'1.0.2','http://pan/SDssdf1Vad213V/app'),('2014090800102','懒人遥控（PC）',6.5,'1.0.2','http://pan/df1Vad213V/app');
+
+/*Table structure for table `state` */
+
+DROP TABLE IF EXISTS `state`;
+
+CREATE TABLE `state` (
+  `sId` varchar(8) NOT NULL,
+  `appId` varchar(16) DEFAULT NULL,
+  `sDate` date DEFAULT NULL,
+  `sIntro` varchar(50) DEFAULT NULL,
+  `sDetail` text,
+  PRIMARY KEY (`sId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `state` */
+
+insert  into `state`(`sId`,`appId`,`sDate`,`sIntro`,`sDetail`) values ('14090801','2014090800100','0000-00-00','安卓正式版1.0','懒人遥控上市了，更新了xxxxx内容'),('14090802','2014090800102','0000-00-00','PC正式版1.0','懒人遥控是这么操作的balabalabala修复了XXXX');
+
+/*Table structure for table `useradvice` */
+
+DROP TABLE IF EXISTS `useradvice`;
+
+CREATE TABLE `useradvice` (
+  `uId` varchar(12) NOT NULL,
+  `uName` varchar(20) DEFAULT NULL,
+  `uTel` varchar(11) DEFAULT NULL,
+  `uEmail` varchar(40) DEFAULT NULL,
+  `uAdvice` varchar(100),
+  PRIMARY KEY (`uId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `useradvice` */
+
+insert  into `useradvice`(`uId`,`uName`,`uTel`,`uEmail`,`uAdvice`) values ('201409081','张三','123456789','12312412423@qq.com','这款软件很不错');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

@@ -1,0 +1,1 @@
+UPDATE `db_lc`.`state` SET `sId` = '2014090803' WHERE `sId` = '14090803'

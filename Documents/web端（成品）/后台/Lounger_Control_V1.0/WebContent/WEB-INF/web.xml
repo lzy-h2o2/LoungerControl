@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JspGeneral</display-name>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>a</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Login_let</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowFile</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.ShowFiles</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>File_Delet</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.File_Delet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>File_Alter</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.File_Alter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Fiile_Upload</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Fiile_Upload</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Advice</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.ShowAdvice</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Update</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.ShowUpdateLog</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>advice_alter</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Advice_alter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Log_alter</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Log_Alter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Log_Alter2</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Log_Alter2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Advice_Delet</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Advice_Delet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Log_Delet</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Log_Delet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Advice_alter2</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Advice_alter2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Test_let</servlet-name>
+    <servlet-class>com.LRKZ.Servlet.Test_let</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>a</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowFile</servlet-name>
+    <url-pattern>/ShowFile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>File_Delet</servlet-name>
+    <url-pattern>/page/appfiles/File_Delet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>File_Alter</servlet-name>
+    <url-pattern>/page/appfiles/file_alter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Fiile_Upload</servlet-name>
+    <url-pattern>/page/upload/File_Upload2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Advice</servlet-name>
+    <url-pattern>/page/advice/Advice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Update</servlet-name>
+    <url-pattern>/UpdateLog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>advice_alter</servlet-name>
+    <url-pattern>/page/advice/advice_alter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Log_alter</servlet-name>
+    <url-pattern>/page/log/Log_alter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Log_Alter2</servlet-name>
+    <url-pattern>/page/log/Log_Alter2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Advice_Delet</servlet-name>
+    <url-pattern>/page/advice/Advice_delet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Log_Delet</servlet-name>
+    <url-pattern>/page/log/Log_Delet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Advice_alter2</servlet-name>
+    <url-pattern>/page/advice/Advice_alter2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test_let</servlet-name>
+    <url-pattern>/page/advice/Test_let</url-pattern>
+  </servlet-mapping>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+  </login-config>
+</web-app>

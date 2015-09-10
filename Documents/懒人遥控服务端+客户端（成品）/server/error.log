@@ -1,0 +1,5 @@
+Exception in thread "Thread-5" java.lang.NullPointerException
+	at com.bhn.loungercontrol.pcserver.Activity.executeCommand(Activity.java:32)
+	at com.bhn.loungercontrol.pcserver.Activity.act(Activity.java:23)
+	at com.bhn.loungercontrol.pcserver.Receive.run(Receive.java:49)
+	at java.lang.Thread.run(Unknown Source)

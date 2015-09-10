@@ -1,0 +1,206 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>管理员登录界面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+	function MM_swapImgRestore() { //v3.0
+		var i, x, a = document.MM_sr;
+		for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++)
+			x.src = x.oSrc;
+	}
+	function MM_preloadImages() { //v3.0
+		var d = document;
+		if (d.images) {
+			if (!d.MM_p)
+				d.MM_p = new Array();
+			var i, j = d.MM_p.length, a = MM_preloadImages.arguments;
+			for (i = 0; i < a.length; i++)
+				if (a[i].indexOf("#") != 0) {
+					d.MM_p[j] = new Image;
+					d.MM_p[j++].src = a[i];
+				}
+		}
+	}
+
+	function MM_findObj(n, d) { //v4.01
+		var p, i, x;
+		if (!d)
+			d = document;
+		if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+			d = parent.frames[n.substring(p + 1)].document;
+			n = n.substring(0, p);
+		}
+		if (!(x = d[n]) && d.all)
+			x = d.all[n];
+		for (i = 0; !x && i < d.forms.length; i++)
+			x = d.forms[i][n];
+		for (i = 0; !x && d.layers && i < d.layers.length; i++)
+			x = MM_findObj(n, d.layers[i].document);
+		if (!x && d.getElementById)
+			x = d.getElementById(n);
+		return x;
+	}
+
+	function MM_swapImage() { //v3.0
+		var i, j = 0, x, a = MM_swapImage.arguments;
+		document.MM_sr = new Array;
+		for (i = 0; i < (a.length - 2); i += 3)
+			if ((x = MM_findObj(a[i])) != null) {
+				document.MM_sr[j++] = x;
+				if (!x.oSrc)
+					x.oSrc = x.src;
+				x.src = a[i + 2];
+			}
+	}
+</script>
+</head>
+
+
+<!-------------#####################################------------->
+
+<script language="javascript">
+	//测试
+	function loginTo() {
+		var f = document.getElementById("form1");
+		if (check()) {
+			f.submit();
+			return true;
+		} else {
+			return false;
+		}
+	}
+	//function formSubmit(){
+	//	var form1 = document.getElementsByName("form1");
+	//		check(form1);
+	//	}
+	//测试
+	function check() {
+		if (checkUser()) {
+			return checkPsw();
+		} else {
+			return false;
+		}
+	}
+	function checkUser() {
+		var user = document.getElementById("users").value;
+		var f = document.getElementById("form1");
+		if (user == "") {
+			alert("用户名不能为空！");
+			f.user.focus();//获取user焦点
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+	function checkPsw() {
+		var psw = document.getElementById("psws").value;
+		var f = document.getElementById("form1");
+
+		if (psw.length < 6) {
+			alert("密码不能少于六位");
+			f.psw.focus();
+			f.psw.select();//错误的话选中
+
+			return false;
+		} else {
+			return true;
+		}
+	}
+</script>
+<style>
+#userDiv {
+	position: absolute;
+	width: 222px;
+	height: 30px;
+}
+
+.userText {
+	width: 222px;
+	height: 30px;
+}
+
+#pswDiv {
+	position: absolute;
+	width: 222px;
+	height: 29px;
+}
+
+.pswClass {
+	width: 222px;
+	height: 30px;
+}
+
+#loginDiv {
+	position: absolute;
+}
+</style>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0"
+	marginheight="0" onLoad="MM_preloadImages('images/login_09_down.jpg')">
+	<!-- Save for Web Slices (login.psd) -->
+	<center>
+		<form id="form1" action="main" method="post">
+			<table id="__01" width="1100" height="601" border="0" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td colspan="4"><img src="images/login_01.jpg" width="1100"
+						height="255" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="2" rowspan="4"><img src="images/login_02.jpg"
+						width="331" height="122" alt=""></td>
+					<td>
+						<div id="userDiv">
+							<input type="text" name="user" id="users" class="userText"
+								value="" style="height: 24px; width: 217px"/>
+						</div> <img src="images/login_03.jpg" width="222" height="30" alt="">
+					</td>
+					<td rowspan="6"><img src="images/login_04.jpg" width="547"
+						height="345" alt=""></td>
+				</tr>
+				<tr>
+					<td><img src="images/login_05.jpg" width="222" height="36"
+						alt=""></td>
+				</tr>
+				<tr>
+					<td><div id="pswDiv">
+							<input type="password" name="psw" id="psws" class="pswClass" style="height: 24px; width: 219px"/>
+						</div> <img src="images/login_06.jpg" width="222" height="30" alt=""></td>
+				</tr>
+				<tr>
+					<td><img src="images/login_07.jpg" width="222" height="26"
+						alt=""></td>
+				</tr>
+				<tr>
+					<td rowspan="2"><img src="images/login_08.jpg" width="299"
+						height="223" alt=""></td>
+					<td colspan="2"><div id="loginDiv">
+							<a href="#" onMouseOut="MM_swapImgRestore()"
+								onMouseOver="MM_swapImage('login_ok','','images/login_09_down.jpg',1)"><img
+								src="images/login_09.jpg" alt="" width="254" height="39"
+								id="login_ok" onClick="javascript:loginTo();return false;"></a>
+						</div> <img src="images/login_09.jpg" width="254" height="39" alt=""></td>
+				</tr>
+				<tr>
+					<td colspan="2"><img src="images/login_10.jpg" width="254"
+						height="184" alt=""></td>
+				</tr>
+				<tr>
+					<td><img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="299"
+						height="1" alt=""></td>
+					<td><img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="32"
+						height="1" alt=""></td>
+					<td><img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="222"
+						height="1" alt=""></td>
+					<td><img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="547"
+						height="1" alt=""></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+	<!-- End Save for Web Slices -->
+</body>
+</html>
