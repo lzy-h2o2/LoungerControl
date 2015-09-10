@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <!-- 自定义格式 -->
+    <!-- 标题格式 -->
+    <style name="title_style">
+        <item name="android:textSize">@dimen/Medium_TextSize</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">80.0dip</item>
+        <item name="android:lineSpacingExtra">12.0dip</item>:
+    </style>
+    <!-- 背景图片格式 -->
+    <style name="img_style">
+        <item name="android:padding">20.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 小文字格式 -->
+    <style name="text_style">
+        <item name="android:textSize">@dimen/Tiny_TextSize</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">30.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 小图标格式 -->
+    <style name="icon_style">
+        <item name="android:padding">5.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 小图片文字格式 -->
+    <style name="icon_title_style">
+        <item name="android:textSize">@dimen/Medium_TextSize</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:paddingLeft">30.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 操作菜单图标格式 -->
+    <style name="oprate_img_style">
+        <item name="android:padding">5.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+	
+    <!-- “设置菜单”格式 -->
+    <!-- "设置菜单"布局格式 -->
+    <style name="option_layout_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <!-- “设置菜单”图片格式 -->
+    <style name="option_img_style">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <!-- "设置菜单"文本格式 -->
+    <style name="option_txt_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="item_scroll_split_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#93b4c5</item>
+    </style>
+    <style name="item_scroll_split_line2">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+		<style name="my_edittext_style" parent="@android:style/Widget.EditText">
+		    <item name="android:textColor">@android:color/white</item>
+		    <item name="android:textColorHint">#e5e5e5</item>
+		    <item name="android:layout_width">240dp</item>
+		    <item name="android:layout_height">wrap_content</item>
+		    <item name="android:singleLine">true</item>      
+        	<item name="android:background">@drawable/edit_bg</item>
+        	<item name="android:gravity">center_horizontal</item>
+    </style>
+	
+
+</resources>

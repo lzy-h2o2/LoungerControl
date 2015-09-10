@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#fe7c00"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80.0dip"
+        android:gravity="center"
+        android:lineSpacingExtra="12.0dip"
+        android:text="@string/start"
+        android:textColor="#ffffffff"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/fanye"
+        android:duplicateParentState="false"
+        android:gravity="center_vertical"
+        android:onClick="startClick"
+        android:textSize="@dimen/Small_TextSize" />
+
+</RelativeLayout>

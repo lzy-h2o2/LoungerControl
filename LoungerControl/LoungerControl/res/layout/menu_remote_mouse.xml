@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/menu_lmd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="灵敏度：" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/menu_lmd_tv"
+        android:layout_toRightOf="@+id/menu_lmd_tv" />
+
+    <View
+        android:id="@+id/menu_line01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/seekBar2"
+        android:background="?android:attr/listDivider" />
+
+    <com.lzy.mouse.view.PuerMouseView
+        android:id="@+id/menu_MouseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_line03"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/menu_line01" >
+
+    </com.lzy.mouse.view.PuerMouseView>
+
+    <View
+        android:id="@+id/menu_line02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/menu_MouseView"
+        android:background="?android:attr/listDivider" />
+     <View
+        android:id="@+id/menu_line03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/linearLayoutBottom"
+        android:background="?android:attr/listDivider" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="150px"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="0px"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCenterWheel"
+            android:layout_width="150px"
+            android:layout_height="180px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="0px"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/buttonUp"
+                android:layout_width="160px"
+                android:layout_height="90px"
+                android:layout_marginTop="10px"
+                android:background="@drawable/btn_mouse_center_up_selector" />
+
+            <ImageView style="@style/item_scroll_split_line" />
+
+            <ImageButton
+                android:id="@+id/buttonDown"
+                android:layout_width="160px"
+                android:layout_height="70px"
+                android:background="@drawable/btn_mouse_center_down_selector" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/mouseViewLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="160px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0px"
+            android:layout_marginRight="0px"
+            android:layout_toLeftOf="@id/linearLayoutCenterWheel"
+            android:background="@drawable/btn_mouse_left_selector" />
+
+        <ImageButton
+            android:id="@+id/mouseViewRight"
+            android:layout_width="wrap_content"
+            android:layout_height="160px"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/linearLayoutCenterWheel"
+            android:background="@drawable/btn_mouse_right_selector" />
+    </RelativeLayout>
+</RelativeLayout>

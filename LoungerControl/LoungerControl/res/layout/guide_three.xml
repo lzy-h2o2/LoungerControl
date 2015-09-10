@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fe7c00" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_style"
+            android:text="@string/title3" />
+
+        <ImageView
+            android:id="@+id/img_iv"
+            style="@style/img_style"
+            android:src="@drawable/guid_three" />
+
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingTop="260.0dip" >
+
+        <TextView
+            android:id="@+id/whats_new_nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/Medium_TextSize" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView
+		android:id="@+id/file_path"
+		android:layout_alignParentTop="true"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+		android:background="#feab03"
+		android:padding="5dp"
+		android:textSize="15sp" />
+	<ListView
+		android:layout_below="@id/file_path"
+		android:layout_above="@+id/ll_bottom"
+		android:id="@id/android:list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+	<TableLayout
+		android:layout_alignParentBottom="true"
+		android:id="@+id/ll_bottom"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="0,1,2"
+		android:layout_margin="2dp">
+		<TableRow
+			android:layout_width="fill_parent">
+
+			<Button
+			    android:id="@+id/file_createdir"
+			    android:layout_width="80dp"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/ppt_btn_pressed"
+			    android:gravity="center"
+			    android:text="@string/file_create" />
+
+			<Button
+				android:id="@+id/paste"
+				android:gravity="center"
+				android:layout_width="80dp"
+				android:layout_height="wrap_content"
+				android:text="@string/file_paste" 
+				android:background="@drawable/ppt_btn_pressed"/>
+			<Button
+				android:id="@+id/cancel"
+				android:gravity="center"
+				android:layout_width="80dp"
+				android:layout_height="wrap_content"
+				android:text="@string/cancel" 
+				android:background="@drawable/ppt_btn_pressed"/>
+		</TableRow>
+	</TableLayout>
+</RelativeLayout>

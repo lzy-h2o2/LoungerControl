@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/advice_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/advice_ico" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="用户反馈" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="50dp"
+        android:textSize="16sp"
+        android:text="用户姓名：" />
+     <requestFocus />
+
+    <EditText
+        android:id="@+id/name_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name_tv"
+        android:layout_alignBottom="@+id/name_tv"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/adv_press"
+        android:textSize="16sp"
+        android:ems="14"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="160dp"
+        android:textSize="16sp"
+        android:text="联系电话：" />
+
+    <EditText
+        android:id="@+id/tel_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tel_tv"
+        android:layout_alignBottom="@+id/tel_tv"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/adv_press"
+        android:textSize="16sp"
+        android:ems="14"
+        android:inputType="phone" >
+
+       
+    </EditText>
+
+    <EditText
+        android:id="@+id/advice_et"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/email_et"
+        android:layout_alignTop="@+id/advice_tv"
+        android:background="@drawable/adv_content"
+        android:gravity="top|left"
+        android:textSize="16sp"
+        android:maxLines="10"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/advice_et"
+        android:layout_alignRight="@+id/quit_btn"
+        android:layout_toRightOf="@+id/advice_tv"
+        android:text="*"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/advice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email_tv"
+        android:layout_below="@+id/email_tv"
+        android:layout_marginTop="30dp"
+        android:text="反馈内容："
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/email_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/adv_press"
+        android:ems="14"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/email_tv"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/email_et"
+        android:layout_alignBottom="@+id/email_et"
+        android:layout_alignLeft="@+id/quit_btn"
+        android:text="用户邮箱："
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/send_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/quit_btn"
+        android:layout_alignBottom="@+id/quit_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/adv_press"
+        android:text="发送"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/quit_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tel_tv"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/adv_press"
+        android:text="取消"
+        android:textSize="16sp" />
+	
+</RelativeLayout>

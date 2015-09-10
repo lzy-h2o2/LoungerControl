@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="store_sd_path">文件存放在SD卡根目录...</string>
+    <string name="app_name">懒人遥控</string>
+    <string name="lc_title">懒 人 遥 控</string>
+    <string name="copyright">CopyRight ©2014 H2O2 SoftwareStudios</string>
+    <string name="title1">"如你所知，
+懒人遥控不只是一个工具"</string>
+    <string name="title2">"一切从首页开始
+操作一览无余"</string>
+    <string name="title3">"想过没有？
+用手机控制PPT!!!"</string>
+    <string name="title4">你可以记录每天的生活瞬间</string>
+    <string name="connectPC">点击链接电脑</string>
+    <string name="ppt">遥控PPT</string>
+    <string name="file_explorer">文件互传</string>
+    <string name="joystick">游戏手柄</string>
+    <string name="keyboard">模拟键盘</string>
+    <string name="mouse">模拟鼠标</string>
+    <string name="visual">开关电脑</string>
+    <string name="start_app">启动--></string>
+    <string name="ip">IP地址：</string>
+    <string name="input_ip">如：192.168.17.56</string>
+    <string name="send_hint">您的建议是我们前进的动力</string>
+    <string name="advice_title">您有什么好的意见或建议要对我们说吗？</string>
+    <string name="send_to_me">发送给我们</string>
+    <string name="about">关于</string>
+    <string name="share">分享</string>
+    <string name="advice">反馈</string>
+    <string name="exit">退出</string>
+    <string name="app_lost_host">断开连接</string>
+    <string name="introduce">懒人遥控，是由双氧水软件工作室团队开发的基于安卓手机的一款用于遥控电脑的应用工具类软件。开发人员有：卢振雨、卞浩南、
+        蔡伟建、季涛、吴高权。在使用过程中遇到任何问题都可以通过以下联系方式找到我们。</string>
+    <string name="qq">QQ群：88299012</string>
+    <string name="email">邮箱：luzhenyuxfcy@sina.com</string>
+    <string name="weiChat">微信公共号：H2O2_SoftwareStudios</string>
+    <string name="setting_activity_setting_link_yourhost">正在拼命连接中．．．</string>
+    <string name="setting_activity_setting_inputrtip">请输入正确的ip</string>
+    <string name="setting_activity_setting_port">请设定与主机约定正确端口号（1024-65535）</string>
+    <string name="setting_activity_setting_link_fail">连接失败，请检查你的电脑端设置！</string>
+    <string name="mouse_activity_net">没有连接到电脑 </string>
+    <string name="exception">抱歉，出错了,重启可能会修正该错误！</string>
+    <string name="input_port">范围：1025~65535</string>
+    <string name="conn">连接电脑</string>
+    <string name="top_text">文件互传界面</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="confirm_exit">确认退出程序？</string>
+    <string name="mainmenu_home">主目录</string>
+    <string name="mainmenu_refresh">刷新</string>
+    <string name="mainmenu_createdir">新建文件夹</string>
+    <string name="mainmenu_exit">退出</string>
+    <string name="file_rename">重命名</string>
+    <string name="file_delete">删除</string>
+    <string name="file_info">详情</string>
+    <string name="file_cannotopen">无法打开: %1$s</string>
+    <string name="file_exists">文件已存在！</string>
+    <string name="file_namecannotempty">文件名不能为空</string>
+    <string name="file_create_fail">创建文件失败！</string>
+    <string name="file_rename_fail">重命名失败！</string>
+    <string name="file_name">文件名</string>
+    <string name="file_size">大小</string>
+    <string name="file_contents">内容</string>
+    <string name="file_lastmodified">最后修改时间</string>
+    <string name="file_paste">粘贴</string>
+    <string name="file_copy">复制</string>
+    <string name="file_move">剪切</string>
+    <string name="file_create">新建</string>
+    <string name="file_copy_fail">复制文件失败！</string>
+    <string name="file_move_fail">移动文件失败！</string>
+    <string name="file_notexists">文件不存在！</string>
+    <string name="title5">"文件互传
+在手机上处理你的文件"</string>
+    <string name="title6">"想你所想
+躺在床上也可以让电脑关机啦~
+还能玩游戏！！！给力~~~"</string>
+    <string name="start">懒   人   遥   控</string>
+
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="请先在电脑端打开ppt文件"
+        android:textColor="#ff0000" />
+
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tip_tv"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/lmd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/line01"
+        android:textSize="16sp"
+        android:text="灵敏度" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lmd_tv"
+        android:layout_marginLeft="20dp"
+        android:max="10"
+        android:layout_toRightOf="@+id/lmd_tv" />
+
+    <View
+        android:id="@+id/line02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/seekBar1"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line02"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ppt_btn_pressed"
+        android:text="从头播放" />
+
+    <Button
+        android:id="@+id/play_location"
+        android:layout_width="80dp"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/play_btn"
+        android:layout_toRightOf="@id/play_btn"
+        android:background="@drawable/ppt_btn_pressed"
+        android:text="播放当前" />
+
+    <Button
+        android:id="@+id/close_btn"
+        android:layout_width="80dp"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/play_location"
+        android:layout_alignBottom="@+id/play_location"
+        android:layout_toRightOf="@+id/play_location"
+        android:background="@drawable/ppt_btn_pressed"
+        android:text="关闭文件" />
+
+    <View
+        android:id="@+id/line03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/play_btn"
+        android:background="?android:attr/listDivider" />
+
+       <com.lzy.mouse.view.PuerMouseView
+           android:id="@+id/puerMouseView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/page_pre_btn"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentRight="true"
+           android:layout_below="@+id/line03" >
+            
+        </com.lzy.mouse.view.PuerMouseView>
+        
+       
+        <View
+        android:id="@+id/line04"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/page_pre_btn"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/page_pre_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ppt_btn_pressed"
+        android:text="上一页" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line03"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/close_btn" />
+
+    <Button
+        android:id="@+id/page_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/page_pre_btn"
+        android:background="@drawable/ppt_btn_pressed"
+        android:text="下一页" />
+
+</RelativeLayout>
